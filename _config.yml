@@ -15,13 +15,18 @@ nav:
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
-  fixed: false
+  fixed: true
 
 menu:
-  # Home: / || fas fa-home
+   主页: / || fas fa-home
+   时间轴: /archives/ || fas fa-archive
+   标签: /tags/ || fas fa-tags
+   分类: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
+   #link: /link/ || fas fa-link
+   关于: /about/ || fas fa-heart
 
 # --------------------------------------
 # Code Blocks Settings
@@ -46,21 +51,21 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+   fab fa-github: https://github.com/chinli || Github || '#24292e'
+   fas fa-envelope: mailto:chinli200808@gmail.com || Email || '#4a7dbe'
 
 # --------------------------------------
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /img/logo.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/avatar.png
   effect: false
 
 # Disable all banner images
-disable_top_img: false
+disable_top_img: true
 
 # If the banner of page not setting, it will show the default_top_img
 default_top_img:
@@ -116,15 +121,12 @@ error_404:
   background: /img/error-page.png
 
 post_meta:
-  # Home Page
-  page:
-    # Choose: created / updated / both
-    date_type: created
-    # Choose: date / relative
-    date_format: date
-    categories: true
-    tags: false
-    label: true
+  page: # Home Page
+    date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
+    date_format: relative # date/relative 顯示日期還是相對日期
+    categories: true # true or false 主頁是否顯示分類
+    tags: true # true or false 主頁是否顯示標籤
+    label: true # true or false 顯示描述性文字
   post:
     # Choose: left / center
     position: left
@@ -208,15 +210,14 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
-  text:
+  enable: true
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+     - img: /img/WeChatPay.png
+       link:
+       text: wechat
+     - img: /img/AliPay.png
+       link:
+       text: alipay
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -259,7 +260,7 @@ footer:
   nav:
   owner:
     enable: true
-    since: 2025
+    since: 2020
   # Copyright of theme and framework
   copyright:
     enable: true
@@ -289,10 +290,10 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/chinli
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Great! I found you.
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -855,18 +856,17 @@ activate_power_mode:
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
-  # The size of ribbon
+  enable: true
   size: 150
   # The opacity of ribbon (0 ~ 1)
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
+  click_to_change: true
   mobile: false
 
 # Fluttering Ribbon
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -885,7 +885,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999
   mobile: false
 
@@ -1130,3 +1130,5 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
+
+
